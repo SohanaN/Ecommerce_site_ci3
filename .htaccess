@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
+# write project name in place of Ecommerce_site_ci3
 RewriteBase /Ecommerce_site_ci3/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
