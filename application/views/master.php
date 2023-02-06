@@ -89,7 +89,7 @@
                                     <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                     <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                     <!--home controller er name & checkout function er name-->
-                                    <li><a href="<?php echo base_url(); ?>index.php/home/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                    <li><a href="<?php echo base_url(); ?>home/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
                                 </ul>
