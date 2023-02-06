@@ -13,4 +13,10 @@ class Home extends CI_Controller {
         $this->load->view('master', $data);
     }
 
+    public function checkout() {
+        $data = array();
+        $data['main_content'] = $this->load->view('pages/checkout', '', true);
+        $this->load->view('master', $data);
+    }
+
 }

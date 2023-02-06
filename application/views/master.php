@@ -6,22 +6,22 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Home | E-Shopper</title>
-        <link href="front_end/css/bootstrap.min.css" rel="stylesheet">
-        <link href="front_end/css/font-awesome.min.css" rel="stylesheet">
-        <link href="front_end/css/prettyPhoto.css" rel="stylesheet">
-        <link href="front_end/css/price-range.css" rel="stylesheet">
-        <link href="front_end/css/animate.css" rel="stylesheet">
-        <link href="front_end/css/main.css" rel="stylesheet">
-        <link href="front_end/css/responsive.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/prettyPhoto.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/price-range.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/animate.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/main.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>front_end/css/responsive.css" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-        <link rel="shortcut icon" href="front_end/images/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="front_end/images/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="front_end/images/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="front_end/images/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="front_end/images/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="<?php echo base_url() ?>front_end/images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url() ?>front_end/images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url() ?>front_end/images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url() ?>front_end/images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url() ?>front_end/images/ico/apple-touch-icon-57-precomposed.png">
     </head><!--/head-->
 
     <body>
@@ -57,7 +57,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href="index.html"><img src="front_end/images/home/logo.png" alt="" /></a>
+                                <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url() ?>front_end/images/home/logo.png" alt="" /></a>
                             </div>
                             <div class="btn-group pull-right">
                                 <div class="btn-group">
@@ -88,7 +88,8 @@
                                 <ul class="nav navbar-nav">
                                     <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                     <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                    <!--home controller er name & checkout function er name-->
+                                    <li><a href="<?php echo base_url(); ?>index.php/home/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
                                 </ul>
@@ -163,7 +164,7 @@
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="front_end/images/home/banner1.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?php echo base_url() ?>front_end/images/home/banner1.jpg" class="girl img-responsive" alt="" />
                                     </div>
                                 </div>
                                 <div class="item">
@@ -174,7 +175,7 @@
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="front_end/images/home/banner2.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?php echo base_url() ?>front_end/images/home/banner2.jpg" class="girl img-responsive" alt="" />
                                     </div>
                                 </div>
 
@@ -186,7 +187,7 @@
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="front_end/images/home/banner3.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?php echo base_url() ?>front_end/images/home/banner3.jpg" class="girl img-responsive" alt="" />
                                     </div>
                                 </div>
 
@@ -224,7 +225,7 @@
                                 <div class="video-gallery text-center">
                                     <a href="#">
                                         <div class="iframe-img">
-                                            <img src="front_end/images/home/iframe1.png" alt="" />
+                                            <img src="<?php echo base_url() ?>front_end/images/home/iframe1.png" alt="" />
                                         </div>
                                         <div class="overlay-icon">
                                             <i class="fa fa-play-circle-o"></i>
@@ -239,7 +240,7 @@
                                 <div class="video-gallery text-center">
                                     <a href="#">
                                         <div class="iframe-img">
-                                            <img src="front_end/images/home/iframe2.png" alt="" />
+                                            <img src="<?php echo base_url() ?>front_end/images/home/iframe2.png" alt="" />
                                         </div>
                                         <div class="overlay-icon">
                                             <i class="fa fa-play-circle-o"></i>
@@ -254,7 +255,7 @@
                                 <div class="video-gallery text-center">
                                     <a href="#">
                                         <div class="iframe-img">
-                                            <img src="front_end/images/home/iframe3.png" alt="" />
+                                            <img src="<?php echo base_url() ?>front_end/images/home/iframe3.png" alt="" />
                                         </div>
                                         <div class="overlay-icon">
                                             <i class="fa fa-play-circle-o"></i>
@@ -269,7 +270,7 @@
                                 <div class="video-gallery text-center">
                                     <a href="#">
                                         <div class="iframe-img">
-                                            <img src="front_end/images/home/iframe4.png" alt="" />
+                                            <img src="<?php echo base_url() ?>front_end/images/home/iframe4.png" alt="" />
                                         </div>
                                         <div class="overlay-icon">
                                             <i class="fa fa-play-circle-o"></i>
@@ -282,7 +283,7 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="address">
-                                <img src="front_end/images/home/map.png" alt="" />
+                                <img src="<?php echo base_url() ?>front_end/images/home/map.png" alt="" />
                                 <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
                             </div>
                         </div>
@@ -369,11 +370,11 @@
 
 
 
-        <script src="front_end/js/jquery.js"></script>
-        <script src="front_end/js/bootstrap.min.js"></script>
-        <script src="front_end/js/jquery.scrollUp.min.js"></script>
-        <script src="front_end/js/price-range.js"></script>
-        <script src="front_end/js/jquery.prettyPhoto.js"></script>
-        <script src="front_end/js/main.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/jquery.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/jquery.scrollUp.min.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/price-range.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/jquery.prettyPhoto.js"></script>
+        <script src="<?php echo base_url() ?>front_end/js/main.js"></script>
     </body>
 </html>
