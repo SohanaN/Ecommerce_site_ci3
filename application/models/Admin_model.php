@@ -2,6 +2,7 @@
 
 class Admin_model extends CI_Model {
 
+//login
     public function check_admin_login_info($email_address, $password) {
         $this->db->select('*');
         $this->db->from('tbl_admin');

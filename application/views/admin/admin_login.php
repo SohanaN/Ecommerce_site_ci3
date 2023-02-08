@@ -1,3 +1,7 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,8 +45,6 @@
             body { background: url(<?php echo base_url() ?>admin_asset/img/bg-login.jpg) !important; }
         </style>
 
-
-
     </head>
 
     <body>
@@ -56,6 +58,15 @@
                             <a href="#"><i class="halflings-icon cog"></i></a>
                         </div>
                         <h2>Login to your account</h2>
+                        <h3 style="color:red">
+                            <?php
+                            $message = $this->session->userdata('message');
+                            if ($message) {
+                                echo $message;
+                                $this->session->unset_userdata('message');
+                            }
+                            ?>
+                        </h3>
                         <form class="form-horizontal" action="<?php echo base_url() ?>login_check" method="post">
                             <fieldset>
 

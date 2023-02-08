@@ -20,10 +20,17 @@ class Admin extends CI_Controller {
 //        print_r($result);
 //        exit();
 
+        $sdata = array();
         if ($result) {
-            $this->load->view('admin/admin_master');
+//            $this->load->view('admin/admin_master');
+            $sdata['admin_id'] = $result->admin_id;
+            $sdata['admin_name'] = $result->admin_name;
+            $this->session->set_userdata($sdata);
+            redirect('/dashboard');
         } else {
-            redirect('login');
+            $sdata['message'] = "user id or pass invalide!";
+            $this->session->set_userdata($sdata);
+            redirect('abcd');
         }
     }
 

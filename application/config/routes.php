@@ -57,10 +57,10 @@ $route['default_controller'] = 'home';
 $route['checkout'] = 'home/checkout';
 
 //Admin Panel
-$route['login'] = 'admin/index';
+$route['abcd'] = 'admin/index';
 $route['login_check'] = 'admin/admin_login_check';
-
-
+$route['dashboard'] = 'super_admin/index';
+$route['logout'] = 'super_admin/logout';
 
 
 $route['404_override'] = '';
