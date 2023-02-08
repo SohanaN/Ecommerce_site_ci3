@@ -60,6 +60,7 @@ $route['checkout'] = 'home/checkout';
 $route['abcd'] = 'admin/index';
 $route['login_check'] = 'admin/admin_login_check';
 $route['dashboard'] = 'super_admin/index';
+$route['add-catergory'] = 'super_admin/add_catergory';
 $route['logout'] = 'super_admin/logout';
 
 

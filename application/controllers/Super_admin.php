@@ -19,6 +19,12 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+    public function add_catergory() {
+        $data = array();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/add_catergory', '', true);
+        $this->load->view('admin/admin_master', $data);
+    }
+
     public function logout() {
         $this->session->unset_userdata('admin_id');
         $this->session->unset_userdata('admin_name');
