@@ -14,7 +14,9 @@ class Super_admin extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('admin/admin_master');
+        $data = array();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/dashboard', '', true);
+        $this->load->view('admin/admin_master', $data);
     }
 
     public function logout() {
