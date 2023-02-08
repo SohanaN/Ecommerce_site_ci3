@@ -13,16 +13,22 @@ class Super_admin extends CI_Controller {
         }
     }
 
+//dashboard
     public function index() {
         $data = array();
         $data['admin_main_conten'] = $this->load->view('admin/pages/dashboard', '', true);
         $this->load->view('admin/admin_master', $data);
     }
 
-    public function add_catergory() {
+//    Add category
+    public function add_category() {
         $data = array();
-        $data['admin_main_conten'] = $this->load->view('admin/pages/add_catergory', '', true);
+        $data['admin_main_conten'] = $this->load->view('admin/pages/add_category', '', true);
         $this->load->view('admin/admin_master', $data);
+    }
+
+    public function save_category() {
+
     }
 
     public function logout() {
