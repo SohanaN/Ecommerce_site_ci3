@@ -9,9 +9,9 @@ class Super_admin extends CI_Controller {
         parent::__construct();
         $this->load->model('super_admin_model');
         $admin_id = $this->session->userdata('admin_id');
-//        if ($admin_id !== NULL) {
-//            redirect('dashboard');
-//        }
+        if ($admin_id == NULL) {
+            redirect('dashboard');
+        }
     }
 
 //dashboard
