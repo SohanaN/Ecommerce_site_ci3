@@ -66,6 +66,7 @@ $route['save-category'] = 'super_admin/save_category';
 $route['manage-category'] = 'super_admin/manage_category';
 $route['unpublish-category/(.+)'] = 'super_admin/unpublish_category/$1';
 $route['publish-category/(.+)'] = 'super_admin/publish_category/$1';
+$route['delete-category/(.+)'] = 'super_admin/delete_category/$1';
 
 $route['logout'] = 'super_admin/logout';
 

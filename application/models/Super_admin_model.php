@@ -47,4 +47,9 @@ class Super_admin_model extends CI_Model {
         $this->db->update('tbl_category');
     }
 
+    public function delete_category_info($category_id) {
+        $this->db->where('category_id', $category_id);
+        $this->db->delete('tbl_category');
+    }
+
 }

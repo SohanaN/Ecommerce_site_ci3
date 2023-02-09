@@ -60,7 +60,7 @@
                                 <a class="btn btn-info" href="#">
                                     <i class="halflings-icon white edit"></i>
                                 </a>
-                                <a class="btn btn-danger" href="#">
+                                <a class="btn btn-danger" href="<?php echo base_url() ?>delete-category/<?php echo $v_category->category_id; ?>">
                                     <i class="halflings-icon white trash"></i>
                                 </a>
                             </td>

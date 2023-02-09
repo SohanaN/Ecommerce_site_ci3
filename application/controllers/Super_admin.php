@@ -55,6 +55,12 @@ class Super_admin extends CI_Controller {
         redirect('manage-category');
     }
 
+    public function delete_category($category_id) {
+//        echo $category_id;
+        $this->super_admin_model->delete_category_info($category_id);
+        redirect('manage-category');
+    }
+
     public function logout() {
         $this->session->unset_userdata('admin_id');
         $this->session->unset_userdata('admin_name');
