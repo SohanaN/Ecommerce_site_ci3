@@ -1,4 +1,13 @@
-
+<script type="text/javascript">
+    function checkDelete() {
+        var chk = confirm("Are you sure to delete this?");
+        if (chk) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
 
 <ul class="breadcrumb">
     <li>
@@ -60,7 +69,7 @@
                                 <a class="btn btn-info" href="#">
                                     <i class="halflings-icon white edit"></i>
                                 </a>
-                                <a class="btn btn-danger" href="<?php echo base_url() ?>delete-category/<?php echo $v_category->category_id; ?>">
+                                <a class="btn btn-danger" href="<?php echo base_url() ?>delete-category/<?php echo $v_category->category_id; ?>" onclick="return checkDelete();">
                                     <i class="halflings-icon white trash"></i>
                                 </a>
                             </td>
