@@ -43,6 +43,18 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+    public function unpublish_category($category_id) {
+//        echo $category_id;
+        $this->super_admin_model->unpublish_category_info($category_id);
+        redirect('manage-category');
+    }
+
+    public function publish_category($category_id) {
+//        echo $category_id;
+        $this->super_admin_model->publish_category_info($category_id);
+        redirect('manage-category');
+    }
+
     public function logout() {
         $this->session->unset_userdata('admin_id');
         $this->session->unset_userdata('admin_name');

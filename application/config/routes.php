@@ -64,6 +64,8 @@ $route['dashboard'] = 'super_admin/index';
 $route['add-category'] = 'super_admin/add_category';
 $route['save-category'] = 'super_admin/save_category';
 $route['manage-category'] = 'super_admin/manage_category';
+$route['unpublish-category/(.+)'] = 'super_admin/unpublish_category/$1';
+$route['publish-category/(.+)'] = 'super_admin/publish_category/$1';
 
 $route['logout'] = 'super_admin/logout';
 

@@ -34,4 +34,17 @@ class Super_admin_model extends CI_Model {
         return $category_info;
     }
 
+//    manage category
+    public function unpublish_category_info($category_id) {
+        $this->db->set('publication_status', 0);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category');
+    }
+
+    public function publish_category_info($category_id) {
+        $this->db->set('publication_status', 1);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category');
+    }
+
 }
