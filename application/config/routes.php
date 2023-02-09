@@ -60,10 +60,12 @@ $route['checkout'] = 'home/checkout';
 $route['abcd'] = 'admin/index';
 $route['login_check'] = 'admin/admin_login_check';
 $route['dashboard'] = 'super_admin/index';
+
 $route['add-category'] = 'super_admin/add_category';
 $route['save-category'] = 'super_admin/save_category';
-$route['logout'] = 'super_admin/logout';
+$route['manage-category'] = 'super_admin/manage_category';
 
+$route['logout'] = 'super_admin/logout';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

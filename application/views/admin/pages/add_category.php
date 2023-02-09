@@ -20,6 +20,15 @@
             </div>
         </div>
         <div class="box-content">
+            <h3 style="color:Green">
+                <?php
+                $message = $this->session->userdata('message');
+                if ($message) {
+                    echo $message;
+                    $this->session->unset_userdata('message');
+                }
+                ?>
+            </h3>
             <form class="form-horizontal" action="<?php echo base_url() ?>save-category" method="post">
                 <fieldset>
                     <div class="control-group">

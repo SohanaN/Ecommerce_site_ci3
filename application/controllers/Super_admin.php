@@ -7,10 +7,11 @@ class Super_admin extends CI_Controller {
     //put your code here
     public function __construct() {
         parent::__construct();
+        $this->load->model('super_admin_model');
         $admin_id = $this->session->userdata('admin_id');
-        if ($admin_id !== NULL) {
-            redirect('dashboard');
-        }
+//        if ($admin_id !== NULL) {
+//            redirect('dashboard');
+//        }
     }
 
 //dashboard
@@ -28,7 +29,18 @@ class Super_admin extends CI_Controller {
     }
 
     public function save_category() {
+        $this->super_admin_model->save_category_info();
+        $sdata = array();
+        $sdata['message'] = "Save category info successfully";
+        $this->session->set_userdata($sdata);
+        redirect('add-category');
+    }
 
+    public function manage_category() {
+        $data = array();
+        $data['all_category_info'] = $this->super_admin_model->all_category_info();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/manage_category', $data, true);
+        $this->load->view('admin/admin_master', $data);
     }
 
     public function logout() {

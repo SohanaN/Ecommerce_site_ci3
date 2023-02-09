@@ -2,7 +2,9 @@
 RewriteEngine on
 # write project name in place of Ecommerce_site_ci3
 RewriteBase /Ecommerce_site_ci3/
+RewriteCond $1 !^(index\.php|public|\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteRule ^(.*)$ index.php?/$1 [L] 
+RewriteRule ^index.php/(.*)$ /$1 [R=302,L]
 </IfModule>
