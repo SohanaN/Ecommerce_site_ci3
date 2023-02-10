@@ -90,4 +90,10 @@ class Super_admin_model extends CI_Model {
         $this->db->update('tbl_manufacture');
     }
 
+//    delete manufacture
+    public function delete_manufacture_info($manufacture_id) {
+        $this->db->where('manufacture_id', $manufacture_id);
+        $this->db->delete('tbl_manufacture');
+    }
+
 }

@@ -73,6 +73,7 @@ $route['save-manufacture'] = 'super_admin/save_manufacture';
 $route['manage-manufacture'] = 'super_admin/manage_manufacture';
 $route['unpublish-manufacture/(.+)'] = 'super_admin/unpublish_manufacture/$1';
 $route['publish-manufacture/(.+)'] = 'super_admin/publish_manufacture/$1';
+$route['delete-manufacture/(.+)'] = 'super_admin/delete_manufacture/$1';
 
 $route['logout'] = 'super_admin/logout';
 

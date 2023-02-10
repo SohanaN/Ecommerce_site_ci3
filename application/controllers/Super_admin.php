@@ -55,6 +55,8 @@ class Super_admin extends CI_Controller {
         redirect('manage-category');
     }
 
+//    delete category
+
     public function delete_category($category_id) {
 //        echo $category_id;
         $this->super_admin_model->delete_category_info($category_id);
@@ -94,6 +96,14 @@ class Super_admin extends CI_Controller {
     public function publish_manufacture($manufacture_id) {
 //        echo $category_id;
         $this->super_admin_model->publish_manufacture_info($manufacture_id);
+        redirect('manage-manufacture');
+    }
+
+//    delete manufacture
+
+    public function delete_manufacture($manufacture_id) {
+//        echo $category_id;
+        $this->super_admin_model->delete_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
     }
 
