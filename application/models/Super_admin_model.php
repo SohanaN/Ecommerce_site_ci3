@@ -2,6 +2,7 @@
 
 class Super_admin_model extends CI_Model {
 
+    //add category data in dashboard page add_category file
     public function save_category_info() {
         $data = array();
         $data['category_name'] = $this->input->post('category_name', true);
@@ -10,7 +11,7 @@ class Super_admin_model extends CI_Model {
         $this->db->insert('tbl_category', $data);
     }
 
-//    show in home page
+//show category in home page master file
     public function select_all_published_category() {
         $this->db->select('*');
         $this->db->from('tbl_category');
@@ -23,7 +24,7 @@ class Super_admin_model extends CI_Model {
         return $category_info;
     }
 
-    //    manage category
+    //show category data in dashboard page manage_category file
     public function all_category_info() {
         $this->db->select('*');
         $this->db->from('tbl_category');
@@ -36,19 +37,22 @@ class Super_admin_model extends CI_Model {
         return $category_info;
     }
 
+// in dashboard page manage_category file
     public function unpublish_category_info($category_id) {
         $this->db->set('publication_status', 0);
         $this->db->where('category_id', $category_id);
         $this->db->update('tbl_category');
     }
 
+// in dashboard page manage_category file
     public function publish_category_info($category_id) {
         $this->db->set('publication_status', 1);
         $this->db->where('category_id', $category_id);
         $this->db->update('tbl_category');
     }
 
-//    delete category
+//    delete category in dashboard page manage_category file
+
     public function delete_category_info($category_id) {
         $this->db->where('category_id', $category_id);
         $this->db->delete('tbl_category');
@@ -57,6 +61,8 @@ class Super_admin_model extends CI_Model {
 //.............................................................
 //...............................................................
 // Manufacture
+    //add manufacture data in dashboard page add_manufacture file
+
     public function save_manufacture_info() {
         $data = array();
         $data['manufacture_name'] = $this->input->post('manufacture_name', true);
@@ -65,8 +71,7 @@ class Super_admin_model extends CI_Model {
         $this->db->insert('tbl_manufacture', $data);
     }
 
-//manage
-
+    //show manufacture data in dashboard page manage_manufacture file
     public function all_manufacture_info() {
         $this->db->select('*');
         $this->db->from('tbl_manufacture');
@@ -79,25 +84,28 @@ class Super_admin_model extends CI_Model {
         return $manufacture_info;
     }
 
+// in dashboard page manage_manufacture file
     public function unpublish_manufacture_info($manufacture_id) {
         $this->db->set('publication_status', 0);
         $this->db->where('manufacture_id', $manufacture_id);
         $this->db->update('tbl_manufacture');
     }
 
+// in dashboard page manage_manufacture file
     public function publish_manufacture_info($manufacture_id) {
         $this->db->set('publication_status', 1);
         $this->db->where('manufacture_id', $manufacture_id);
         $this->db->update('tbl_manufacture');
     }
 
-//    delete manufacture
+//    delete manufacture data in dashboard page manage_manufacture file
+
     public function delete_manufacture_info($manufacture_id) {
         $this->db->where('manufacture_id', $manufacture_id);
         $this->db->delete('tbl_manufacture');
     }
 
-//    show in home page
+//    show manufacture in home page home_content file
     public function select_all_published_manufacture() {
         $this->db->select('*');
         $this->db->from('tbl_manufacture');

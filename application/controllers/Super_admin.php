@@ -14,20 +14,29 @@ class Super_admin extends CI_Controller {
         }
     }
 
-//dashboard
+//    ........................................
+//    Dashboard
+//    ........................................
+//
+//show all design in dashboard page admin_master file
     public function index() {
         $data = array();
         $data['admin_main_conten'] = $this->load->view('admin/pages/dashboard', '', true);
         $this->load->view('admin/admin_master', $data);
     }
 
-//    Add category
+//..........................................
+//    Category
+//..........................................
+//
+//    Add category in dashboard page add_category file
     public function add_category() {
         $data = array();
         $data['admin_main_conten'] = $this->load->view('admin/pages/add_category', '', true);
         $this->load->view('admin/admin_master', $data);
     }
 
+//    after save redirect category in dashboard page add_category file
     public function save_category() {
         $this->super_admin_model->save_category_info();
         $sdata = array();
@@ -36,6 +45,7 @@ class Super_admin extends CI_Controller {
         redirect('add-category');
     }
 
+//show category data in dashboard page manage_category file
     public function manage_category() {
         $data = array();
         $data['all_category_info'] = $this->super_admin_model->all_category_info();
@@ -43,35 +53,39 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+// in dashboard page manage_category file
     public function unpublish_category($category_id) {
 //        echo $category_id;
         $this->super_admin_model->unpublish_category_info($category_id);
         redirect('manage-category');
     }
 
+// in dashboard page manage_category file
     public function publish_category($category_id) {
 //        echo $category_id;
         $this->super_admin_model->publish_category_info($category_id);
         redirect('manage-category');
     }
 
-//    delete category
-
+//    delete category in dashboard page manage_category file
     public function delete_category($category_id) {
 //        echo $category_id;
         $this->super_admin_model->delete_category_info($category_id);
         redirect('manage-category');
     }
 
-//    ..........................................
-//    ..........................................
+//..........................................
 //    Manufacture
+//..........................................
+//
+    //    Add manufacture in dashboard page add_manufacture file
     public function add_manufacture() {
         $data = array();
         $data['admin_main_conten'] = $this->load->view('admin/pages/add_manufacture', '', true);
         $this->load->view('admin/admin_master', $data);
     }
 
+//    after save redirect category in dashboard pageadd_manufacture file
     public function save_manufacture() {
         $this->super_admin_model->save_manufacture_info();
         $sdata = array();
@@ -80,6 +94,8 @@ class Super_admin extends CI_Controller {
         redirect('add-manufacture');
     }
 
+//show manufacture data in dashboard page manage_manufacture file
+
     public function manage_manufacture() {
         $data = array();
         $data['all_manufacture_info'] = $this->super_admin_model->all_manufacture_info();
@@ -87,20 +103,21 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+// in dashboard page manage_manufacture file
     public function unpublish_manufacture($manufacture_id) {
 //        echo $category_id;
         $this->super_admin_model->unpublish_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
     }
 
+// in dashboard page manage_manufacture file
     public function publish_manufacture($manufacture_id) {
 //        echo $category_id;
         $this->super_admin_model->publish_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
     }
 
-//    delete manufacture
-
+//    delete manufacture in dashboard page manage_manufacture file
     public function delete_manufacture($manufacture_id) {
 //        echo $category_id;
         $this->super_admin_model->delete_manufacture_info($manufacture_id);
@@ -108,8 +125,10 @@ class Super_admin extends CI_Controller {
     }
 
 //    ........................................
+//    Dashboard
 //    ........................................
-
+//
+// in dashboard page admin_master file
     public function logout() {
         $this->session->unset_userdata('admin_id');
         $this->session->unset_userdata('admin_name');
