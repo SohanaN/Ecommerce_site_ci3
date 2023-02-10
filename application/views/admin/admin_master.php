@@ -340,7 +340,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="nav nav-tabs nav-stacked main-menu">
                             <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                             <li><a href="<?php echo base_url(); ?>add-category"><i class="icon-envelope"></i><span class="hidden-tablet"> Add Category</span></a></li>
-                            <li><a href="<?php echo base_url(); ?>manage-category"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Category</span></a></li>
+                            <li><a href="<?php echo base_url(); ?>manage-category"><i class="icon-envelope"></i><span class="hidden-tablet"> Manage Category</span></a></li>
+                            <li><a href="<?php echo base_url(); ?>add-manufacture"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Manufacture</span></a></li>
 
                             <li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
                             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
