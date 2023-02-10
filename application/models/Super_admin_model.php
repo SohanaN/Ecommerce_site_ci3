@@ -10,6 +10,7 @@ class Super_admin_model extends CI_Model {
         $this->db->insert('tbl_category', $data);
     }
 
+//    show in home page
     public function select_all_published_category() {
         $this->db->select('*');
         $this->db->from('tbl_category');
@@ -94,6 +95,19 @@ class Super_admin_model extends CI_Model {
     public function delete_manufacture_info($manufacture_id) {
         $this->db->where('manufacture_id', $manufacture_id);
         $this->db->delete('tbl_manufacture');
+    }
+
+//    show in home page
+    public function select_all_published_manufacture() {
+        $this->db->select('*');
+        $this->db->from('tbl_manufacture');
+        $this->db->where('publication_status', 1);
+        $query_result = $this->db->get();
+        $manufacture_info = $query_result->result();
+//        echo '<pre>';
+//        print_r($manufacture_info);
+//        exit();
+        return $manufacture_info;
     }
 
 }
