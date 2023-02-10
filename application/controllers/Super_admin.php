@@ -85,6 +85,18 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+    public function unpublish_manufacture($manufacture_id) {
+//        echo $category_id;
+        $this->super_admin_model->unpublish_manufacture_info($manufacture_id);
+        redirect('manage-manufacture');
+    }
+
+    public function publish_manufacture($manufacture_id) {
+//        echo $category_id;
+        $this->super_admin_model->publish_manufacture_info($manufacture_id);
+        redirect('manage-manufacture');
+    }
+
 //    ........................................
 //    ........................................
 

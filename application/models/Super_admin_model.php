@@ -78,4 +78,16 @@ class Super_admin_model extends CI_Model {
         return $manufacture_info;
     }
 
+    public function unpublish_manufacture_info($manufacture_id) {
+        $this->db->set('publication_status', 0);
+        $this->db->where('manufacture_id', $manufacture_id);
+        $this->db->update('tbl_manufacture');
+    }
+
+    public function publish_manufacture_info($manufacture_id) {
+        $this->db->set('publication_status', 1);
+        $this->db->where('manufacture_id', $manufacture_id);
+        $this->db->update('tbl_manufacture');
+    }
+
 }
