@@ -61,6 +61,8 @@ class Super_admin extends CI_Controller {
         redirect('manage-category');
     }
 
+//    ..........................................
+//    ..........................................
 //    Manufacture
     public function add_manufacture() {
         $data = array();
@@ -75,6 +77,16 @@ class Super_admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('add-manufacture');
     }
+
+    public function manage_manufacture() {
+        $data = array();
+        $data['all_manufacture_info'] = $this->super_admin_model->all_manufacture_info();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/manage_manufacture', $data, true);
+        $this->load->view('admin/admin_master', $data);
+    }
+
+//    ........................................
+//    ........................................
 
     public function logout() {
         $this->session->unset_userdata('admin_id');
