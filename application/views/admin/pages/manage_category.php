@@ -66,7 +66,7 @@
                                         <i class="halflings-icon white thumbs-up"></i>
                                     </a>
                                 <?php } ?>
-                                <a class="btn btn-info" href="#">
+                                <a class="btn btn-info" href="<?php echo base_url() ?>edit-category/<?php echo $v_category->category_id; ?>">
                                     <i class="halflings-icon white edit"></i>
                                 </a>
                                 <a class="btn btn-danger" href="<?php echo base_url() ?>delete-category/<?php echo $v_category->category_id; ?>" onclick="return checkDelete();">

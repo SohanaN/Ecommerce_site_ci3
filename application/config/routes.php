@@ -67,6 +67,7 @@ $route['manage-category'] = 'super_admin/manage_category';
 $route['unpublish-category/(.+)'] = 'super_admin/unpublish_category/$1';
 $route['publish-category/(.+)'] = 'super_admin/publish_category/$1';
 $route['delete-category/(.+)'] = 'super_admin/delete_category/$1';
+$route['edit-category/(.+)'] = 'super_admin/edit_category/$1';
 
 $route['add-manufacture'] = 'super_admin/add_manufacture';
 $route['save-manufacture'] = 'super_admin/save_manufacture';

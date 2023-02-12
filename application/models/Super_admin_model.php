@@ -52,10 +52,27 @@ class Super_admin_model extends CI_Model {
     }
 
 //    delete category in dashboard page manage_category file
-
     public function delete_category_info($category_id) {
         $this->db->where('category_id', $category_id);
         $this->db->delete('tbl_category');
+    }
+
+//    edit category in dashboard page manage_category file
+    public function select_category_by_id($category_id) {
+        //        echo $category_id;
+//        exit();
+//
+//        get & show data
+        $this->db->select('*');
+        $this->db->from('tbl_category');
+
+        $this->db->where('category_id', $category_id);
+        $query_result = $this->db->get();
+        $result = $query_result->row();
+//        echo '<pre>';
+//        print_r($result);
+//        exit();
+        return $result;
     }
 
 //.............................................................
