@@ -74,17 +74,25 @@ class Super_admin extends CI_Controller {
         redirect('manage-category');
     }
 
-//    edit category in dashboard page manage_category file
+    // for edit category
+//    get & show category data in dashboard page manage_category file
     public function edit_category($category_id) {
-        //        get & show data
         $data = array();
         $data['category_info'] = $this->super_admin_model->select_category_by_id($category_id);
 
 //        echo $category_id;
 //        exit();
-        //    view category in dashboard page edit_category file
+//
+        //    show category in dashboard page edit_category file
         $data['admin_main_conten'] = $this->load->view('admin/pages/edit_category', $data, true);
         $this->load->view('admin/admin_master', $data);
+    }
+
+// for edit category
+    //    change & update category data in dashboard page edit_category file
+    public function update_category() {
+        $this->super_admin_model->update_category_info();
+        redirect('manage-category');
     }
 
 //..........................................

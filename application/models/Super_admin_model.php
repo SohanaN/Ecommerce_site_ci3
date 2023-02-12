@@ -57,12 +57,13 @@ class Super_admin_model extends CI_Model {
         $this->db->delete('tbl_category');
     }
 
-//    edit category in dashboard page manage_category file
+// for edit category
+//
+//    get & show category data in dashboard page manage_category file
     public function select_category_by_id($category_id) {
         //        echo $category_id;
 //        exit();
 //
-//        get & show data
         $this->db->select('*');
         $this->db->from('tbl_category');
 
@@ -73,6 +74,19 @@ class Super_admin_model extends CI_Model {
 //        print_r($result);
 //        exit();
         return $result;
+    }
+
+// for edit category
+    //    change & update category data in dashboard page edit_category file
+    public function update_category_info() {
+        $data = array();
+        $category_id = $this->input->post('category_id', true);
+//        echo $category_id;
+//        exit();
+        $data['category_name'] = $this->input->post('category_name', true);
+        $data['category_description'] = $this->input->post('category_description', true);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category', $data);
     }
 
 //.............................................................
