@@ -168,4 +168,17 @@ class Super_admin_model extends CI_Model {
         return $result;
     }
 
+// for edit manufacture
+    //    change & update manufacture data in dashboard page edit_manufacture file
+    public function update_manufacture_info() {
+        $data = array();
+        $manufacture_id = $this->input->post('manufacture_id', true);
+//        echo $manufacture_id;
+//        exit();
+        $data['manufacture_name'] = $this->input->post('manufacture_name', true);
+        $data['manufacture_description'] = $this->input->post('manufacture_description', true);
+        $this->db->where('manufacture_id', $manufacture_id);
+        $this->db->update('tbl_manufacture', $data);
+    }
+
 }

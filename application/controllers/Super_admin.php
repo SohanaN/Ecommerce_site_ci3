@@ -156,6 +156,13 @@ class Super_admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
+// for edit manufacture
+    //    change & update manufacture data in dashboard page edit_manufacture file
+    public function update_manufacture() {
+        $this->super_admin_model->update_manufacture_info();
+        redirect('manage-manufacture');
+    }
+
 //    ........................................
 //    Dashboard
 //    ........................................
