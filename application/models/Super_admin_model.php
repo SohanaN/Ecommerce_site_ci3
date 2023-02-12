@@ -149,4 +149,23 @@ class Super_admin_model extends CI_Model {
         return $manufacture_info;
     }
 
+// for edit manufacture
+//
+//    get & show manufacture data in dashboard page manage_manufacture file
+    public function select_manufacture_by_id($manufacture_id) {
+        //        echo $manufacture_id;
+//        exit();
+//
+        $this->db->select('*');
+        $this->db->from('tbl_manufacture');
+
+        $this->db->where('manufacture_id', $manufacture_id);
+        $query_result = $this->db->get();
+        $result = $query_result->row();
+//        echo '<pre>';
+//        print_r($result);
+//        exit();
+        return $result;
+    }
+
 }

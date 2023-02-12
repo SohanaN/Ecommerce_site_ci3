@@ -77,12 +77,11 @@ class Super_admin extends CI_Controller {
     // for edit category
 //    get & show category data in dashboard page manage_category file
     public function edit_category($category_id) {
+        //        echo $category_id;
+//        exit();
         $data = array();
         $data['category_info'] = $this->super_admin_model->select_category_by_id($category_id);
 
-//        echo $category_id;
-//        exit();
-//
         //    show category in dashboard page edit_category file
         $data['admin_main_conten'] = $this->load->view('admin/pages/edit_category', $data, true);
         $this->load->view('admin/admin_master', $data);
@@ -126,23 +125,35 @@ class Super_admin extends CI_Controller {
 
 // in dashboard page manage_manufacture file
     public function unpublish_manufacture($manufacture_id) {
-//        echo $category_id;
+//        echo $manufacture_id;
         $this->super_admin_model->unpublish_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
     }
 
 // in dashboard page manage_manufacture file
     public function publish_manufacture($manufacture_id) {
-//        echo $category_id;
+//        echo $manufacture_id;
         $this->super_admin_model->publish_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
     }
 
 //    delete manufacture in dashboard page manage_manufacture file
     public function delete_manufacture($manufacture_id) {
-//        echo $category_id;
+//        echo $manufacture_id;
         $this->super_admin_model->delete_manufacture_info($manufacture_id);
         redirect('manage-manufacture');
+    }
+
+    // for edit manufacture
+//    get & show manufacture data in dashboard page manage_manufacture file
+    public function edit_manufacture($manufacture_id) {
+//        echo $manufacture_id;
+//        exit();
+        $data = array();
+        $data['manufacture_info'] = $this->super_admin_model->select_manufacture_by_id($manufacture_id);
+        //    show manufacture in dashboard page edit_manufacture file
+        $data['admin_main_conten'] = $this->load->view('admin/pages/edit_manufacture', $data, true);
+        $this->load->view('admin/admin_master', $data);
     }
 
 //    ........................................

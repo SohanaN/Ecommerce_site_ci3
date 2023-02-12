@@ -66,7 +66,7 @@
                                         <i class="halflings-icon white thumbs-up"></i>
                                     </a>
                                 <?php } ?>
-                                <a class="btn btn-info" href="#">
+                                <a class="btn btn-info" href="<?php echo base_url() ?>edit-manufacture/<?php echo $v_manufacture->manufacture_id; ?>">
                                     <i class="halflings-icon white edit"></i>
                                 </a>
                                 <a class="btn btn-danger" href="<?php echo base_url() ?>delete-manufacture/<?php echo $v_manufacture->manufacture_id; ?>" onclick="return checkDelete();">
