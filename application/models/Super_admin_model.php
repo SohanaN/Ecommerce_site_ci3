@@ -226,14 +226,50 @@ class Super_admin_model extends CI_Model {
         $data['product_price'] = $this->input->post('product_price', true);
         $data['product_new_price'] = $this->input->post('product_new_price', true);
         $data['product_quantity'] = $this->input->post('product_quantity', true);
-//        $data['is_featured'] = $this->input->post('is_featured', true);
-//        if ($is_featured == 'on') {
-//$is_featured
-//        } else {
-//
-//        }
-        $data['product_image'] = $this->input->post('product_image', true);
+        $is_featured = $this->input->post('is_featured', true);
+        if ($is_featured == "on") {
+//            echo $is_featured;
+//            exit();
+            $data['is_featured'] = 1;
+        } else {
+            $data['is_featured'] = 0;
+        }
+
+//        for image
+        $sdata = array();
+        $error = "";
+
+        $config['upload_path'] = 'product_images/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = 1000;
+        $config['max_width'] = 1024;
+        $config['max_height'] = 768;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('product_image')) {
+            $error = $this->upload->display_errors();
+
+//            echo $error;
+//            exit();
+//            $this->load->view('upload_form', $error);
+        } else {
+            $sdata = $this->upload->data();
+
+//            echo '<pre>';
+//            print_r($sdata);
+//            exit();
+
+            $data['product_image'] = $config['upload_path'] . $sdata['file_name'];
+//            $this->load->view('upload_success', $data);
+        }
+
         $data['publication_status'] = $this->input->post('publication_status', true);
+
+//        echo '<pre>';
+//        print_r($data);
+//        exit();
+
         $this->db->insert('tbl_product', $data);
     }
 

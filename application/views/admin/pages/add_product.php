@@ -29,7 +29,7 @@
                 }
                 ?>
             </h3>
-            <form class="form-horizontal" action="<?php echo base_url() ?>save-product" method="post">
+            <form class="form-horizontal" action="<?php echo base_url() ?>save-product" enctype="multipart/form-data" method="post">
                 <fieldset>
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Product Name</label>
