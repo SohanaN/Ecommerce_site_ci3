@@ -163,6 +163,33 @@ class Super_admin extends CI_Controller {
         redirect('manage-manufacture');
     }
 
+//..........................................
+//    Product
+//..........................................
+//
+    //    Add product in dashboard page add_product file
+    public function add_product() {
+//        echo '<h1>Product</h1>';
+        $data = array();
+        $data = array();
+        $data['published_category_info'] = $this->super_admin_model->select_all_published_category_info();
+        $data['published_manufacture_info'] = $this->super_admin_model->select_all_published_manufacture_info();
+//        echo '<pre>';
+//        print_r($published_manufacture_info);
+//        exit();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/add_product', $data, true);
+        $this->load->view('admin/admin_master', $data);
+    }
+
+///    after save redirect product in dashboard page add_product file
+    public function save_product() {
+        $this->super_admin_model->save_product_info();
+        $sdata = array();
+        $sdata['message'] = "Save product info successfully";
+        $this->session->set_userdata($sdata);
+        redirect('add-product');
+    }
+
 //    ........................................
 //    Dashboard
 //    ........................................

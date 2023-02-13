@@ -24,6 +24,10 @@ class Super_admin_model extends CI_Model {
         return $category_info;
     }
 
+//..........................................
+//    Category
+//..........................................
+//
     //show category data in dashboard page manage_category file
     public function all_category_info() {
         $this->db->select('*');
@@ -89,11 +93,11 @@ class Super_admin_model extends CI_Model {
         $this->db->update('tbl_category', $data);
     }
 
-//.............................................................
-//...............................................................
-// Manufacture
+//..........................................
+//   Manufacture
+//..........................................
+//
     //add manufacture data in dashboard page add_manufacture file
-
     public function save_manufacture_info() {
         $data = array();
         $data['manufacture_name'] = $this->input->post('manufacture_name', true);
@@ -179,6 +183,58 @@ class Super_admin_model extends CI_Model {
         $data['manufacture_description'] = $this->input->post('manufacture_description', true);
         $this->db->where('manufacture_id', $manufacture_id);
         $this->db->update('tbl_manufacture', $data);
+    }
+
+//..........................................
+//   Product
+//..........................................
+//
+    //add category data in dashboard page add_product file
+    public function select_all_published_category_info() {
+        $this->db->select('*');
+        $this->db->from('tbl_category');
+        $this->db->where('publication_status', 1);
+        $query_result = $this->db->get();
+        $result = $query_result->result();
+//        echo '<pre>';
+//        print_r($result);
+//        exit();
+        return $result;
+    }
+
+    //add manufacture data in dashboard page add_product file
+    public function select_all_published_manufacture_info() {
+        $this->db->select('*');
+        $this->db->from('tbl_manufacture');
+        $this->db->where('publication_status', 1);
+        $query_result = $this->db->get();
+        $result = $query_result->result();
+//        echo '<pre>';
+//        print_r($result);
+//        exit();
+        return $result;
+    }
+
+//add product data in dashboard page add_product file
+    public function save_product_info() {
+        $data = array();
+        $data['product_name'] = $this->input->post('product_name', true);
+        $data['category_id'] = $this->input->post('category_id', true);
+        $data['manufacture_id'] = $this->input->post('manufacture_id', true);
+        $data['product_short_description'] = $this->input->post('product_short_description', true);
+        $data['product_long_description'] = $this->input->post('product_long_description', true);
+        $data['product_price'] = $this->input->post('product_price', true);
+        $data['product_new_price'] = $this->input->post('product_new_price', true);
+        $data['product_quantity'] = $this->input->post('product_quantity', true);
+//        $data['is_featured'] = $this->input->post('is_featured', true);
+//        if ($is_featured == 'on') {
+//$is_featured
+//        } else {
+//
+//        }
+        $data['product_image'] = $this->input->post('product_image', true);
+        $data['publication_status'] = $this->input->post('publication_status', true);
+        $this->db->insert('tbl_product', $data);
     }
 
 }
