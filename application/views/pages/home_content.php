@@ -62,7 +62,7 @@
         <div class="col-sm-9 padding-right">
             <div class="features_items"><!--features_items-->
                 <h2 class="title text-center">Features Items</h2>
-                <?php foreach ($all__published_product_info as $v_product) { ?>
+                <?php foreach ($all_published_product_info as $v_product) { ?>
 
                     <div class="col-sm-4">
                         <div class="product-image-wrapper">
@@ -77,7 +77,8 @@
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$<?php echo $v_product->product_new_price ?></h2>
+                                        <h4>Old Price: $<?php echo $v_product->product_price ?></h4>
+                                        <h2>New Price: $<?php echo $v_product->product_new_price ?></h2>
                                         <p><?php echo $v_product->product_name ?></p>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
