@@ -191,7 +191,6 @@ class Super_admin extends CI_Controller {
     }
 
 //show product data in dashboard page manage_product file
-
     public function manage_product() {
         $data = array();
         $data['all_product_info'] = $this->super_admin_model->all_product_info();
