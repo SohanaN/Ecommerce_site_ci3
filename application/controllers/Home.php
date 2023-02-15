@@ -15,6 +15,17 @@ class Home extends CI_Controller {
         $this->load->view('master', $data);
     }
 
+    //  show product category wise in homepage
+    public function category_product($category_id) {
+//        echo $category_id;
+//        exit();
+        $data = array();
+        $data['all_published_product_info_by_category'] = $this->welcome_model->all_published_product_info_by_category($category_id);
+        $data['all_featured_image'] = $this->welcome_model->all_featured_image();
+        $data['main_content'] = $this->load->view('pages/category_product', $data, true);
+        $this->load->view('master', $data);
+    }
+
     public function checkout() {
         $data = array();
         $data['main_content'] = $this->load->view('pages/checkout', '', true);

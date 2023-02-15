@@ -27,4 +27,20 @@ class Welcome_model extends CI_Model {
         return $all_featured;
     }
 
+    //  show product category wise in homepage
+    public function all_published_product_info_by_category($category_id) {
+//        echo $category_id;
+//        exit();
+        $this->db->select('*');
+        $this->db->from('tbl_product');
+        $this->db->where('publication_status', 1);
+        $this->db->where('category_id', $category_id);
+        $query_result = $this->db->get();
+        $product_info = $query_result->result();
+//        echo '<pre>';
+//        print_r($product_info);
+//        exit();
+        return $product_info;
+    }
+
 }

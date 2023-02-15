@@ -14,8 +14,8 @@
                                     <a  href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
                                     </a>
 
-        <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
-        </a>-->
+                    <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
+                    </a>-->
                                 </h4>
                             </div>
                             <!--                        <div id="sportswear" class="panel-collapse collapse">
@@ -65,7 +65,7 @@
         <div class="col-sm-9 padding-right">
             <div class="features_items"><!--features_items-->
                 <h2 class="title text-center">Features Items</h2>
-                <?php foreach ($all_published_product_info as $v_product) { ?>
+                <?php foreach ($all_published_product_info_by_category as $v_product) { ?>
 
                     <div class="col-sm-4">
                         <div class="product-image-wrapper">
