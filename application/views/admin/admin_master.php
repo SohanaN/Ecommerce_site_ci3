@@ -345,6 +345,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="<?php echo base_url(); ?>add-manufacture"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Manufacture</span></a></li>
                             <li><a href="<?php echo base_url(); ?>manage-manufacture"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Manufacture</span></a></li>
                             <li><a href="<?php echo base_url(); ?>add-product"><i class="icon-eye-open"></i><span class="hidden-tablet"> Add Product</span></a></li>
+                            <li><a href="<?php echo base_url(); ?>manage-product"><i class="icon-eye-open"></i><span class="hidden-tablet"> Manage Product</span></a></li>
                             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
                             <li>
                                 <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>

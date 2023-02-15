@@ -273,4 +273,23 @@ class Super_admin_model extends CI_Model {
         $this->db->insert('tbl_product', $data);
     }
 
+    //show product data in dashboard page manage_product file
+    public function all_product_info() {
+        $this->db->select('*');
+        $this->db->from('tbl_product');
+
+        $query_result = $this->db->get();
+        $product_info = $query_result->result();
+//        echo '<pre>';
+//        print_r($product_info);
+//        exit();
+        return $product_info;
+    }
+
+    // in dashboard page manage_product file
+//    public function unpublish_product_info($product_id) {
+//        $this->db->set('publication_status', 0);
+//        $this->db->where('product_id', $product_id);
+//        $this->db->update('tbl_product');
+//    }
 }

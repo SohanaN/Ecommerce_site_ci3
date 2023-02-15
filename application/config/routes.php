@@ -99,6 +99,7 @@ $route['update-manufacture'] = 'super_admin/update_manufacture';
 // for add data in product
 $route['add-product'] = 'super_admin/add_product';
 $route['save-product'] = 'super_admin/save_product';
+$route['manage-product'] = 'super_admin/manage_product';
 
 
 $route['logout'] = 'super_admin/logout';

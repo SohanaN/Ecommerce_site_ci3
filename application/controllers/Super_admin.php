@@ -190,6 +190,15 @@ class Super_admin extends CI_Controller {
         redirect('add-product');
     }
 
+//show product data in dashboard page manage_product file
+
+    public function manage_product() {
+        $data = array();
+        $data['all_product_info'] = $this->super_admin_model->all_product_info();
+        $data['admin_main_conten'] = $this->load->view('admin/pages/manage_product', $data, true);
+        $this->load->view('admin/admin_master', $data);
+    }
+
 //    ........................................
 //    Dashboard
 //    ........................................
