@@ -32,4 +32,14 @@ class Home extends CI_Controller {
         $this->load->view('master', $data);
     }
 
+//    product_details
+    public function product_details() {
+//        echo 'product_details';
+//        exit();
+//        $data['all_published_product_info'] = $this->welcome_model->all_published_product_info();
+        $data['all_featured_image'] = $this->welcome_model->all_featured_image();
+        $data['main_content'] = $this->load->view('pages/product_details', $data, true);
+        $this->load->view('master', $data);
+    }
+
 }

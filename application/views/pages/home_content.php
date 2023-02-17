@@ -14,8 +14,8 @@
                                     <a  href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
                                     </a>
 
-        <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
-        </a>-->
+                            <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
+                            </a>-->
                                 </h4>
                             </div>
                             <!--                        <div id="sportswear" class="panel-collapse collapse">
@@ -83,6 +83,7 @@
                                         <h4>Old Price: $<?php echo $v_product->product_price ?></h4>
                                         <h2>New Price: $<?php echo $v_product->product_new_price ?></h2>
                                         <p><?php echo $v_product->product_name ?></p>
+                                        <a href="<?php echo base_url() ?>home/product_details" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Product Details</a>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
