@@ -33,10 +33,11 @@ class Home extends CI_Controller {
     }
 
 //    product_details
-    public function product_details() {
+    public function product_details($product_id) {
 //        echo 'product_details';
+//        echo $product_id;
 //        exit();
-//        $data['all_published_product_info'] = $this->welcome_model->all_published_product_info();
+        $data['product_info'] = $this->welcome_model->select_product_by_product_id($product_id);
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/product_details', $data, true);
         $this->load->view('master', $data);
