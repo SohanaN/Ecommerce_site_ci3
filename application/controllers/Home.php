@@ -32,7 +32,7 @@ class Home extends CI_Controller {
         $this->load->view('master', $data);
     }
 
-//    product_details
+//    product_details page
     public function product_details($product_id) {
 //        echo 'product_details';
 //        echo $product_id;
