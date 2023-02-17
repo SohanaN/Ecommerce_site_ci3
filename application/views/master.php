@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <ul role="menu" class="sub-menu">
                                             <li><a href="shop.html">Products</a></li>
                                             <li><a href="product-details.html">Product Details</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="<?php echo base_url(); ?>checkout">Checkout</a></li>
                                             <li><a href="cart.html">Cart</a></li>
                                             <li><a href="<?php echo base_url(); ?>abcd">Login</a></li>
                                         </ul>
@@ -215,8 +215,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <a  href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
                                                 </a>
 
-                                                <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
-                                                </a>-->
+                                                    <!--                                    <a data-toggle="collapse" data-parent="#accordian" href="<?php echo base_url() ?>home/category_product/<?php echo $v_category->category_id; ?>"><span class="badge pull-right"><i class="fa fa-plus"></i></span><?php echo $v_category->category_name; ?>
+                                                    </a>-->
                                             </h4>
                                         </div>
                                         <!--                        <div id="sportswear" class="panel-collapse collapse">

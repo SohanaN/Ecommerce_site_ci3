@@ -13,6 +13,7 @@
                             <h4>Old Price: $<?php echo $v_product->product_price ?></h4>
                             <h2>New Price: $<?php echo $v_product->product_new_price ?></h2>
                             <p><?php echo $v_product->product_name ?></p>
+                            <p><a href="<?php echo base_url() ?>home/product_details/<?php echo $v_product->product_id ?>">Product Details</a></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                         <div class="product-overlay">
@@ -20,7 +21,7 @@
                                 <h4>Old Price: $<?php echo $v_product->product_price ?></h4>
                                 <h2>New Price: $<?php echo $v_product->product_new_price ?></h2>
                                 <p><?php echo $v_product->product_name ?></p>
-                                <a href="<?php echo base_url() ?>home/product_details/<?php echo $v_product->product_id ?>" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Product Details</a>
+                                <p><a href="<?php echo base_url() ?>home/product_details/<?php echo $v_product->product_id ?>" >Product Details</a></p>
                                 <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                             </div>
                         </div>

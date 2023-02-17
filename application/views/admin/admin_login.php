@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row-fluid">
                 <div class="login-box">
                     <div class="icons">
-                        <a href="index.html"><i class="halflings-icon home"></i></a>
+                        <a href="<?php echo base_url(); ?>"><i class="halflings-icon home"></i></a>
                         <a href="#"><i class="halflings-icon cog"></i></a>
                     </div>
                     <h2>Login to your account</h2>
