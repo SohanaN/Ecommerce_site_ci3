@@ -1,4 +1,14 @@
 
+<!--slider-->
+<section id="slider">
+    Load the slider view
+    <?php $this->load->view('pages/shared/slider'); ?>
+</section>
+<!--/slider-->
+
+<!-- Load the left_sidebar view -->
+<?php $this->load->view('pages/shared/left_sidebar'); ?>
+
 <div class="col-sm-9 padding-right">
     <div class="features_items"><!--features_items-->
         <h2 class="title text-center">Features Items</h2>

@@ -1,4 +1,6 @@
 
+<!-- Load the left_sidebar view -->
+<?php $this->load->view('pages/shared/left_sidebar'); ?>
 
 <div class="col-sm-9 padding-right">
     <div class="features_items"><!--features_items-->
