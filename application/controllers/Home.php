@@ -6,14 +6,16 @@ class Home extends CI_Controller {
 
     public function index() {
         $data = array();
+        // to show slider only on main page
+        $data['slider'] = true;
+        // dynamic title
+        $data['title'] = "Home";
         // first parameter page er location
         // second parameter array hoy jodi kono data pass korte hoy noito '' blank rakte hoy
         // third parameter true dile page er code return hoy
         $data['all_published_product_info'] = $this->welcome_model->all_published_product_info();
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/home_content', $data, true);
-//        to show slider only on main page
-        $data['slider'] = true;
         $this->load->view('master', $data);
     }
 
@@ -22,14 +24,19 @@ class Home extends CI_Controller {
 //        echo $category_id;
 //        exit();
         $data = array();
+        // dynamic title
+        $data['title'] = "Category Product";
         $data['all_published_product_info_by_category'] = $this->welcome_model->all_published_product_info_by_category($category_id);
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/category_product', $data, true);
         $this->load->view('master', $data);
     }
 
+//Checkout page
     public function checkout() {
         $data = array();
+        // dynamic title
+        $data['title'] = "Checkout";
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/checkout', $data, true);
         $this->load->view('master', $data);
@@ -40,6 +47,9 @@ class Home extends CI_Controller {
 //        echo 'product_details';
 //        echo $product_id;
 //        exit();
+        $data = array();
+        // dynamic title
+        $data['title'] = "Product Details";
         $data['product_info'] = $this->welcome_model->select_product_by_product_id($product_id);
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/product_details', $data, true);

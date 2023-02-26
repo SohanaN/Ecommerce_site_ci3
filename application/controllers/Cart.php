@@ -18,6 +18,8 @@ class Cart extends CI_Controller {
     public function cart_details() {
 //        echo 'cart_details';
         $data = array();
+        // dynamic title
+        $data['title'] = "Cart Details";
 //        $data['all_published_product_info_by_category'] = $this->welcome_model->all_published_product_info_by_category($category_id);
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/cart', $data, true);
