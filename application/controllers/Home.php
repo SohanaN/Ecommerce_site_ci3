@@ -28,7 +28,8 @@ class Home extends CI_Controller {
 
     public function checkout() {
         $data = array();
-        $data['main_content'] = $this->load->view('pages/checkout', '', true);
+        $data['all_featured_image'] = $this->welcome_model->all_featured_image();
+        $data['main_content'] = $this->load->view('pages/checkout', $data, true);
         $this->load->view('master', $data);
     }
 

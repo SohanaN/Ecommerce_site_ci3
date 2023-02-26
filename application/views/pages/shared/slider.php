@@ -26,7 +26,7 @@
                             <button type="button" class="btn btn-default get">Get it now</button>
                         </div>
                         <div class="col-sm-6">
-                            <img src="<?php echo base_url() . $v_featured_image->product_image ?>" class="girl img-responsive" alt="" />
+                            <a href="<?php echo base_url() ?>home/product_details/<?php echo $v_featured_image->product_id ?>">  <img src="<?php echo base_url() . $v_featured_image->product_image ?>" class="girl img-responsive" alt="" /></a>
                         </div>
                     </div>
                     <?php

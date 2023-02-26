@@ -1,7 +1,7 @@
 
 <!--slider-->
 <section id="slider">
-    Load the slider view
+    <!--Load the slider view-->
     <?php $this->load->view('pages/shared/slider'); ?>
 </section>
 <!--/slider-->
