@@ -1,10 +1,5 @@
 
-<!--slider-->
-<section id="slider">
-    <!--Load the slider view-->
-    <?php $this->load->view('pages/shared/slider'); ?>
-</section>
-<!--/slider-->
+
 
 <!-- Load the left_sidebar view -->
 <?php $this->load->view('pages/shared/left_sidebar'); ?>

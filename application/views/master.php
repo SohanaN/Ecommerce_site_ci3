@@ -33,6 +33,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php $this->load->view('pages/shared/header'); ?>
         </header><!--/header-->
 
+        <!--slider-->
+        <?php if (isset($slider)) { ?> <!-- to show slider only on main page-->
+            <section id="slider">
+                <!--Load the slider view-->
+                <?php $this->load->view('pages/shared/slider'); ?>
+            </section>
+        <?php } ?>
+        <!--/slider-->
+
         <section>
             <div class="container">
                 <div class="row">

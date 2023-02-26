@@ -12,6 +12,8 @@ class Home extends CI_Controller {
         $data['all_published_product_info'] = $this->welcome_model->all_published_product_info();
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/home_content', $data, true);
+//        to show slider only on main page
+        $data['slider'] = true;
         $this->load->view('master', $data);
     }
 
