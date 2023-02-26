@@ -42,30 +42,35 @@
         </div>
         <div class="col-sm-7">
             <div class="product-information"><!--/product-information-->
-                <img src="<?php echo base_url() ?>front_end/images/product-details/new.jpg" class="newarrival" alt="" />
-                <h2><?php echo $product_info->product_name ?></h2>
-                <!--<p>Web ID: 1089772</p>-->
-                <img src="<?php echo base_url() ?>front_end/images/product-details/rating.png" alt="" />
-                <span>
-                    <span>US $<?php echo $product_info->product_new_price ?></span>
-                    <label>Quantity: </label>
-                    <input type="text" value="3" />
-                    <button type="button" class="btn btn-fefault cart">
-                        <i class="fa fa-shopping-cart"></i>
-                        Add to cart
-                    </button>
-                </span>
-                <p><b>Availability: </b>
-                    <?php
-                    if ($product_info->product_quantity <= 0) {
-                        echo 'Not Availabe';
-                    } else {
-                        echo 'Availabe';
-                    }
-                    ?></p>
-                <p><b>Condition:</b> New</p>
-                <p><b>Brand: </b><?php echo $product_info->manufacture_name ?></p>
-                <a href=""><img src="<?php echo base_url() ?>front_end/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+                <form class="form-inline" action="/Ecommerce_site_ci3/cart/add_to_cart" method="post">
+                    <img src="<?php echo base_url() ?>front_end/images/product-details/new.jpg" class="newarrival" alt="" />
+                    <h2><?php echo $product_info->product_name ?></h2>
+                    <!--<p>Web ID: 1089772</p>-->
+                    <img src="<?php echo base_url() ?>front_end/images/product-details/rating.png" alt="" />
+                    <span>
+                        <span>US $<?php echo $product_info->product_new_price ?></span>
+
+                        <label>Quantity: </label>
+                        <input type="text" value="1" name="qty"/>
+                        <input type="hidden" name="product_id" value="<?php echo $product_info->product_id ?>" />
+                        <button type="submit" class="btn btn-fefault cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </button>
+
+                    </span>
+                    <p><b>Availability: </b>
+                        <?php
+                        if ($product_info->product_quantity <= 0) {
+                            echo 'Not Availabe';
+                        } else {
+                            echo 'Availabe';
+                        }
+                        ?></p>
+                    <p><b>Condition:</b> New</p>
+                    <p><b>Brand: </b><?php echo $product_info->manufacture_name ?></p>
+                    <a href=""><img src="<?php echo base_url() ?>front_end/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+                </form>
             </div><!--/product-information-->
         </div>
     </div><!--/product-details-->
