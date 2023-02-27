@@ -66,4 +66,16 @@ class Cart extends CI_Controller {
         redirect('cart/cart_details');
     }
 
+    public function delete_cart($row_id) {
+
+//Updating The Cart (https://codeigniter.com/userguide3/libraries/cart.html)
+        $data = array(
+            'rowid' => $row_id,
+            'qty' => 0
+        );
+
+        $this->cart->update($data);
+        redirect('cart/cart_details');
+    }
+
 }

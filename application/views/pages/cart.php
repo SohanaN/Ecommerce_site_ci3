@@ -44,10 +44,10 @@ $contents = $this->cart->contents();
                             <td class="cart_quantity">
                                 <div class="cart_quantity_button">
                                     <form action="<?php echo base_url() ?>cart/update_cart/<?php echo $v_contents['rowid'] ?>" method="post">
-                                        <a class="cart_quantity_up" href=""> + </a>
+                                        <!--<a class="cart_quantity_up" href=""> + </a>-->
                                         <input class="cart_quantity_input" type="text" name="qty" value="<?php echo $v_contents['qty'] ?>" autocomplete="off" size="2">
                                         <input class="cart_quantity_input" type="hidden" name="rowid" value="<?php echo $v_contents['rowid'] ?>">
-                                        <a class="cart_quantity_down" href=""> - </a>
+                                        <!--<a class="cart_quantity_down" href=""> - </a>-->
                                         <button class="btn btn-warning" style="margin-left: 10px" type="submit"> Update</button>
                                     </form>
                                 </div>
@@ -56,7 +56,7 @@ $contents = $this->cart->contents();
                                 <p class="cart_total_price">$<?php echo $v_contents['subtotal'] ?></p>
                             </td>
                             <td class="cart_delete">
-                                <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                <a class="cart_quantity_delete" href="<?php echo base_url() ?>cart/delete_cart/<?php echo $v_contents['rowid'] ?>"><i class="fa fa-times"></i></a>
                             </td>
                         </tr>
                     <?php } ?>
