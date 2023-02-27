@@ -1,4 +1,4 @@
-
+<!--add to cart-->
 <?php
 $contents = $this->cart->contents();
 //echo '<pre>';
@@ -43,9 +43,13 @@ $contents = $this->cart->contents();
                             </td>
                             <td class="cart_quantity">
                                 <div class="cart_quantity_button">
-                                    <a class="cart_quantity_up" href=""> + </a>
-                                    <input class="cart_quantity_input" type="text" name="quantity" value="<?php echo $v_contents['qty'] ?>" autocomplete="off" size="2">
-                                    <a class="cart_quantity_down" href=""> - </a>
+                                    <form action="<?php echo base_url() ?>cart/update_cart/<?php echo $v_contents['rowid'] ?>" method="post">
+                                        <a class="cart_quantity_up" href=""> + </a>
+                                        <input class="cart_quantity_input" type="text" name="qty" value="<?php echo $v_contents['qty'] ?>" autocomplete="off" size="2">
+                                        <input class="cart_quantity_input" type="hidden" name="rowid" value="<?php echo $v_contents['rowid'] ?>">
+                                        <a class="cart_quantity_down" href=""> - </a>
+                                        <button class="btn btn-warning" style="margin-left: 10px" type="submit"> Update</button>
+                                    </form>
                                 </div>
                             </td>
                             <td class="cart_total">
@@ -72,7 +76,7 @@ $contents = $this->cart->contents();
                     <!--<li>Shipping Cost <span>Free</span></li>-->
                     <li>Total <span>$<?php echo $vat + $this->cart->total(); ?></span></li>
                 </ul>
-                <a class="btn btn-default update" href="">Update</a>
+                <!--<a class="btn btn-default update" href="">Update</a>-->
                 <a class="btn btn-default check_out" href="">Check Out</a>
             </div>
         </div>

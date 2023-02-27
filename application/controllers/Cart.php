@@ -4,12 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cart extends CI_Controller {
 
-//        user guide shopping cart class
+//     library from user guide shopping cart class
     public function __construct() {
         parent::__construct();
         $this->load->library('cart');
     }
 
+//    cart page
     public function add_to_cart() {
 //        echo 'cart';
 //        exit();
@@ -36,6 +37,7 @@ class Cart extends CI_Controller {
         redirect('cart/cart_details');
     }
 
+//    cart page
     public function cart_details() {
 //        echo 'cart_details';
         $data = array();
@@ -45,6 +47,23 @@ class Cart extends CI_Controller {
         $data['all_featured_image'] = $this->welcome_model->all_featured_image();
         $data['main_content'] = $this->load->view('pages/cart', $data, true);
         $this->load->view('master', $data);
+    }
+
+//    cart page
+    public function update_cart($row_id) {
+        $qty = $this->input->post('qty');
+        $row_id = $this->input->post('rowid');
+//        echo $qty . '</br>';
+//        echo $row_id;
+//        exit();
+//Updating The Cart (https://codeigniter.com/userguide3/libraries/cart.html)
+        $data = array(
+            'rowid' => $row_id,
+            'qty' => $qty
+        );
+
+        $this->cart->update($data);
+        redirect('cart/cart_details');
     }
 
 }
