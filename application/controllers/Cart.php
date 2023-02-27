@@ -4,6 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cart extends CI_Controller {
 
+//        user guide shopping cart class
+    public function __construct() {
+        parent::__construct();
+        $this->load->library('cart');
+    }
+
     public function add_to_cart() {
 //        echo 'cart';
 //        exit();
@@ -12,6 +18,21 @@ class Cart extends CI_Controller {
 //        echo $qty . '</br>';
 //        echo $product_id;
 //        exit();
+        $product_info = $this->welcome_model->select_product_by_product_id($product_id);
+//        echo '<pre>';
+//        print_r($product_info);
+//        exit();
+//
+//        user guide shopping cart class
+        $data = array(
+            'id' => $product_info->product_id,
+            'qty' => $qty,
+            'price' => $product_info->product_new_price,
+            'name' => $product_info->product_name,
+            'options' => array('image' => $product_info->product_image)
+        );
+
+        $this->cart->insert($data);
         redirect('cart/cart_details');
     }
 
